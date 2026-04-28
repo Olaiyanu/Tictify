@@ -12,6 +12,7 @@ import CreateEvent from './pages/CreateEvent';
 import Dashboard from './pages/Dashboard';
 import ManageEvents from './pages/ManageEvents';
 import ViewEvent from './pages/ViewEvent';
+import AllEvents from './pages/AllEvents';
 
 // Route Guard
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
@@ -43,6 +44,7 @@ export default function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/event/:id" element={<ViewEvent />} />
+          <Route path="/events" element={<AllEvents />} />
           <Route 
             path="/dashboard" 
             element={

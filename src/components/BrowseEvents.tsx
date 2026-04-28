@@ -21,8 +21,8 @@ export default function BrowseEvents() {
   const categories = ['All', 'Music', 'Tech', 'Outdoor', 'Culture', 'Meetup'];
 
   const filteredEvents = activeCategory === 'All' 
-    ? events 
-    : events.filter(e => e.category?.toLowerCase() === activeCategory.toLowerCase());
+    ? events.slice(0, 5) 
+    : events.filter(e => e.category?.toLowerCase() === activeCategory.toLowerCase()).slice(0, 3);
 
   return (
     <section id="browse" className="py-24 px-6 bg-brand-dark overflow-hidden">
@@ -100,10 +100,10 @@ export default function BrowseEvents() {
         </div>
 
         <div className="mt-20 flex justify-center">
-           <button className="btn-secondary px-12 group">
+           <Link to="/events" className="btn-secondary px-12 group inline-flex items-center">
              Search More Events
              <Search className="w-5 h-5 ml-3 text-brand-green group-hover:rotate-12 transition-transform" />
-           </button>
+           </Link>
         </div>
       </div>
     </section>
