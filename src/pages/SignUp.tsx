@@ -12,7 +12,7 @@ export default function SignUp() {
     e.preventDefault();
     // Mock Signup
     localStorage.setItem('isLoggedIn', 'true');
-    navigate('/dashboard');
+    navigate('/events');
   };
 
   return (
