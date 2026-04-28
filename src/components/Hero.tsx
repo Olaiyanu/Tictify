@@ -45,8 +45,10 @@ export default function Hero() {
           </motion.div>
           
           <motion.h1 variants={itemVariants} className="text-6xl md:text-9xl font-bold leading-[1.05] mb-8 max-w-5xl font-display">
-            Sell Event Tickets <br />
-            <span className="bg-gradient-to-r from-brand-green via-white to-brand-green bg-[length:200%_auto] animate-gradient bg-clip-text text-transparent">The Smart Way</span>
+            <span className="bg-gradient-to-r from-brand-green via-white to-brand-green bg-[length:200%_auto] animate-gradient bg-clip-text text-transparent">
+              Sell Event Tickets <br />
+              The Smart Way
+            </span>
           </motion.h1>
           
           <motion.p variants={itemVariants} className="text-xl md:text-2xl text-gray-400 mb-12 max-w-3xl leading-relaxed">

@@ -58,7 +58,7 @@ export default function CreateEvent() {
 
   const [eventData, setEventData] = useState({
     title: '',
-    category: 'Music Concert',
+    category: 'Music',
     startDate: '',
     startTime: '',
     venueName: '',
@@ -240,9 +240,11 @@ export default function CreateEvent() {
                       onChange={(e) => setEventData({ ...eventData, category: e.target.value })}
                       className="w-full bg-white/[0.03] border border-white/10 rounded-2xl p-4 text-base font-bold focus:outline-none focus:ring-4 focus:ring-brand-green/10 focus:border-brand-green transition-all appearance-none cursor-pointer"
                     >
-                      <option>Music Concert</option>
-                      <option>Tech Conference</option>
-                      <option>Community Meetup</option>
+                      <option value="Music">Music Concert</option>
+                      <option value="Tech">Tech Conference</option>
+                      <option value="Outdoor">Outdoor / Beach</option>
+                      <option value="Culture">Art & Culture</option>
+                      <option value="Meetup">Community Meetup</option>
                     </select>
                   </div>
                 </div>

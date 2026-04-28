@@ -16,7 +16,12 @@ export default function CTA() {
         <div className="absolute -top-10 -right-10 w-40 h-40 bg-brand-green/10 rounded-full blur-3xl" />
         <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-brand-purple/20 rounded-full blur-3xl" />
 
-        <h2 className="text-5xl md:text-7xl font-bold mb-8 font-display tracking-tight">Ready to sell out <br /><span className="text-brand-green">your next event?</span></h2>
+        <h2 className="text-5xl md:text-7xl font-bold mb-8 font-display tracking-tight leading-tight">
+          Ready to sell out <br />
+          <span className="bg-gradient-to-r from-brand-green via-white to-brand-green bg-[length:200%_auto] animate-gradient bg-clip-text text-transparent">
+            your next event?
+          </span>
+        </h2>
         <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto font-medium leading-relaxed">
           Join thousands of promoters and organizations already using Tictify to power their ticketing experiences.
         </p>

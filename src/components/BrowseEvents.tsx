@@ -18,7 +18,7 @@ export default function BrowseEvents() {
     setEvents([...savedEvents, ...MOCK_EVENTS]);
   }, []);
 
-  const categories = ['All', 'Music', 'Tech', 'Outdoor', 'Culture'];
+  const categories = ['All', 'Music', 'Tech', 'Outdoor', 'Culture', 'Meetup'];
 
   const filteredEvents = activeCategory === 'All' 
     ? events 
@@ -90,7 +90,7 @@ export default function BrowseEvents() {
                   </div>
                 </div>
                 
-                <Link to="/events" className="w-full py-4 bg-white/5 border border-white/10 rounded-2xl text-[10px] font-bold uppercase tracking-[0.2em] text-white hover:bg-brand-green hover:text-brand-dark hover:border-transparent transition-all flex items-center justify-center gap-2 group/btn">
+                <Link to={`/event/${event.id}`} className="w-full py-4 bg-white/5 border border-white/10 rounded-2xl text-[10px] font-black uppercase tracking-[0.2em] text-white hover:bg-brand-green hover:text-brand-dark hover:border-transparent transition-all flex items-center justify-center gap-2 group/btn">
                   View Tickets
                   <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                 </Link>
