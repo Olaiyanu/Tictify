@@ -485,36 +485,36 @@ export default function CreateEvent() {
       </main>
 
       {/* Persistent Bottom Bar */}
-      <div className="fixed bottom-0 left-0 w-full bg-brand-dark/60 backdrop-blur-3xl border-t border-white/5 p-6 z-[60]">
-        <div className="max-w-4xl mx-auto flex items-center gap-6">
+      <div className="fixed bottom-0 left-0 w-full bg-brand-dark/60 backdrop-blur-3xl border-t border-white/5 p-4 z-[60]">
+        <div className="max-w-4xl mx-auto flex items-center gap-4">
           <button 
             onClick={handlePrev}
             disabled={currentStep === 1}
-            className={`flex-1 flex items-center justify-center gap-3 p-5 rounded-2xl font-bold text-sm tracking-widest uppercase transition-all ${
+            className={`flex-1 flex items-center justify-center gap-2 p-3.5 rounded-xl font-bold text-[10px] tracking-widest uppercase transition-all ${
               currentStep === 1 
                 ? 'bg-white/5 text-gray-700 cursor-not-allowed' 
                 : 'bg-white/10 text-white hover:bg-white/20'
             }`}
           >
-            <ChevronLeft className="w-5 h-5" />
+            <ChevronLeft className="w-4 h-4" />
             Back
           </button>
           
           {currentStep === totalSteps ? (
             <button 
               onClick={handleLaunchEvent}
-              className="flex-[2] btn-primary shadow-[0_0_50px_rgba(0,255,156,0.25)] h-[64px]"
+              className="flex-[2] btn-primary shadow-[0_0_50px_rgba(0,255,156,0.25)] h-12"
             >
-              <span className="tracking-widest uppercase text-sm">Launch Live Event</span>
-              <CheckCircle2 className="w-6 h-6 ml-3" />
+              <span className="tracking-widest uppercase text-xs">Launch Live Event</span>
+              <CheckCircle2 className="w-5 h-5 ml-2" />
             </button>
           ) : (
             <button 
               onClick={handleNext}
-              className="flex-[2] btn-primary h-[64px]"
+              className="flex-[2] btn-primary h-12"
             >
-              <span className="tracking-widest uppercase text-sm font-black">Continue</span>
-              <ChevronRight className="w-6 h-6 ml-auto" />
+              <span className="tracking-widest uppercase text-xs font-black">Continue</span>
+              <ChevronRight className="w-5 h-5 ml-auto" />
             </button>
           )}
         </div>
