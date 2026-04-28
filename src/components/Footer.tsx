@@ -1,3 +1,5 @@
+import { Twitter, Instagram, Linkedin } from 'lucide-react';
+
 export default function Footer() {
   return (
     <footer className="py-12 px-6 border-t border-white/5">
@@ -11,10 +13,28 @@ export default function Footer() {
           © {new Date().getFullYear()} Tictify. All rights reserved.
         </p>
 
-        <div className="flex gap-6 text-sm text-gray-500">
-          <a href="#" className="hover:text-brand-green transition-colors">Twitter</a>
-          <a href="#" className="hover:text-brand-green transition-colors">Instagram</a>
-          <a href="#" className="hover:text-brand-green transition-colors">LinkedIn</a>
+        <div className="flex gap-4">
+          <a 
+            href="#" 
+            className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-500 hover:text-brand-green hover:border-brand-green/30 hover:bg-brand-green/5 transition-all duration-300 group"
+            aria-label="Twitter"
+          >
+            <Twitter className="w-5 h-5 transition-transform group-hover:scale-110" />
+          </a>
+          <a 
+            href="#" 
+            className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-500 hover:text-brand-green hover:border-brand-green/30 hover:bg-brand-green/5 transition-all duration-300 group"
+            aria-label="Instagram"
+          >
+            <Instagram className="w-5 h-5 transition-transform group-hover:scale-110" />
+          </a>
+          <a 
+            href="#" 
+            className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-500 hover:text-brand-green hover:border-brand-green/30 hover:bg-brand-green/5 transition-all duration-300 group"
+            aria-label="LinkedIn"
+          >
+            <Linkedin className="w-5 h-5 transition-transform group-hover:scale-110" />
+          </a>
         </div>
       </div>
     </footer>
