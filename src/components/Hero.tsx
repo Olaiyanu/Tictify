@@ -41,7 +41,7 @@ export default function Hero() {
         >
           <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-2xl mb-8 group hover:border-brand-green/30 transition-colors">
             <Sparkles className="w-4 h-4 text-brand-green" />
-            <span className="text-sm font-bold uppercase tracking-widest text-brand-green">Welcome to the future of Ticketing</span>
+            <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-brand-green whitespace-nowrap">Future of Ticketing</span>
           </motion.div>
           
           <motion.h1 variants={itemVariants} className="text-6xl md:text-9xl font-bold leading-[1.05] mb-8 max-w-5xl font-display">
@@ -53,7 +53,7 @@ export default function Hero() {
             Create professional events in minutes, sell secure tickets, and manage entries with ease—trusted by thousands across Nigeria.
           </motion.p>
           
-          <motion.div variants={itemVariants} className="flex flex-wrap justify-center gap-6 mb-24">
+          <motion.div variants={itemVariants} className="flex flex-wrap justify-center gap-6 mb-32 md:mb-24">
             <Link to="/signup" className="btn-primary group">
               Create an Event
               <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
@@ -104,21 +104,21 @@ export default function Hero() {
         <motion.div 
           animate={{ y: [0, -20, 0] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute -top-[450px] -left-4 md:-left-12 glass-card !p-5 flex items-center gap-4 w-60 shadow-2xl z-20 border-brand-green/20"
+          className="absolute -top-[380px] md:-top-[450px] -left-4 md:-left-12 glass-card !p-5 flex items-center gap-4 w-56 md:w-60 shadow-2xl z-20 border-brand-green/20"
         >
-          <div className="w-12 h-12 bg-brand-green/20 rounded-2xl flex items-center justify-center text-brand-green">
-            <Ticket className="w-6 h-6" />
+          <div className="w-10 h-10 md:w-12 md:h-12 bg-brand-green/20 rounded-2xl flex items-center justify-center text-brand-green">
+            <Ticket className="w-5 h-5 md:w-6 md:h-6" />
           </div>
           <div>
-            <p className="text-white text-sm font-bold">Ticket Received</p>
-            <p className="text-[10px] text-gray-500 tracking-wider font-bold uppercase">Transaction Multi-Pass</p>
+            <p className="text-white text-xs md:text-sm font-bold">Ticket Received</p>
+            <p className="text-[8px] md:text-[10px] text-gray-500 tracking-wider font-bold uppercase">Transaction Multi-Pass</p>
           </div>
         </motion.div>
 
         <motion.div 
           animate={{ y: [0, 20, 0] }}
           transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-          className="absolute -top-[200px] -right-4 md:-right-12 glass-card !p-5 flex items-center gap-4 w-64 shadow-2xl z-20 border-brand-purple/20"
+          className="absolute -top-[150px] md:-top-[200px] -right-4 md:-right-12 glass-card !p-5 flex items-center gap-4 w-60 md:w-64 shadow-2xl z-20 border-brand-purple/20"
         >
           <div className="w-12 h-12 bg-brand-purple/30 rounded-2xl flex items-center justify-center text-white">
             <Users className="w-6 h-6" />
