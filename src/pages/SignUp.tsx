@@ -8,14 +8,14 @@ export default function SignUp() {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   return (
-    <div className="min-h-screen bg-brand-dark flex flex-col lg:flex-row overflow-hidden relative">
+    <div className="min-h-screen bg-brand-dark flex flex-col lg:flex-row relative">
       {/* Back to Home - Floating for Desktop/Mobile */}
       <Link 
         to="/" 
-        className="absolute top-6 left-6 lg:top-10 lg:right-10 lg:left-auto z-50 flex items-center gap-2 text-gray-400 hover:text-white transition-colors group"
+        className="absolute top-6 right-6 lg:top-10 lg:right-10 z-50 flex items-center gap-2 text-gray-400 hover:text-white transition-colors group"
       >
         <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-        <span className="text-xs font-bold uppercase tracking-widest">Back to Home</span>
+        <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest">Back to Home</span>
       </Link>
 
       {/* Visual Side Panel */}
@@ -28,8 +28,7 @@ export default function SignUp() {
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=1200')] bg-cover bg-center opacity-30 mix-blend-overlay" />
         <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/20 via-transparent to-brand-dark/80" />
         
-        <Link to="/" className="relative z-10 flex items-center gap-2">
-          <img src="/logo.svg" alt="Tictify Logo" className="w-8 h-8 object-contain" />
+        <Link to="/" className="relative z-10 flex items-center">
           <span className="text-2xl font-bold tracking-tighter text-white">Tictify</span>
         </Link>
 
@@ -65,9 +64,8 @@ export default function SignUp() {
       </motion.div>
 
       {/* Form Side */}
-      <div className="flex-1 flex items-center justify-center p-6 md:p-12 lg:p-20 relative">
-        <Link to="/" className="lg:hidden absolute top-10 left-10 flex items-center gap-2">
-            <img src="/logo.svg" alt="Tictify Logo" className="w-6 h-6 object-contain" />
+      <div className="flex-1 flex flex-col items-center justify-center p-6 pt-32 sm:p-12 lg:p-20 relative min-h-screen lg:min-h-0">
+        <Link to="/" className="lg:hidden absolute top-6 left-6 flex items-center">
             <span className="text-xl font-bold text-white tracking-tighter">Tictify</span>
         </Link>
 
@@ -77,9 +75,9 @@ export default function SignUp() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="w-full max-w-md"
         >
-          <div className="mb-12">
-            <h2 className="text-4xl font-bold text-white mb-3 font-display">Create an account</h2>
-            <p className="text-gray-500 font-medium">Register as an organizer on Tictify</p>
+          <div className="mb-8 sm:mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-2 sm:mb-3 font-display">Create an account</h2>
+            <p className="text-gray-500 font-medium text-sm sm:text-base">Register as an organizer on Tictify</p>
           </div>
 
           <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>

@@ -19,8 +19,7 @@ export default function Navbar() {
         scrolled ? 'py-4 bg-brand-dark/80 backdrop-blur-xl border-b border-white/5' : 'py-8 bg-transparent'
       }`}
     >
-      <Link to="/" className="flex items-center gap-3 group cursor-pointer">
-        <img src="/logo.svg" alt="Tictify Logo" className="w-8 h-8 object-contain" />
+      <Link to="/" className="flex items-center group cursor-pointer">
         <span className="text-white font-display font-bold text-2xl tracking-tighter">Tictify</span>
       </Link>
 
