@@ -27,10 +27,8 @@ export default function SignIn() {
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=1200')] bg-cover bg-center opacity-30 mix-blend-overlay" />
         <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/20 via-transparent to-brand-dark/80" />
         
-        <Link to="/" className="relative z-10 flex items-center gap-3">
-          <div className="w-10 h-10 bg-brand-green rounded-xl flex items-center justify-center">
-            <ShieldCheck className="w-6 h-6 text-brand-dark" />
-          </div>
+        <Link to="/" className="relative z-10 flex items-center gap-2">
+          <img src="/logo.svg" alt="Tictify Logo" className="w-8 h-8 object-contain" />
           <span className="text-2xl font-bold tracking-tighter text-white">Tictify</span>
         </Link>
 
@@ -60,11 +58,8 @@ export default function SignIn() {
 
       {/* Form Side */}
       <div className="flex-1 flex items-center justify-center p-6 md:p-12 lg:p-20 relative">
-        {/* Mobile Logo */}
         <Link to="/" className="lg:hidden absolute top-10 left-10 flex items-center gap-2">
-            <div className="w-8 h-8 bg-brand-green rounded-lg flex items-center justify-center">
-                <ShieldCheck className="w-5 h-5 text-brand-dark" />
-            </div>
+            <img src="/logo.svg" alt="Tictify Logo" className="w-6 h-6 object-contain" />
             <span className="text-xl font-bold text-white tracking-tighter">Tictify</span>
         </Link>
 

@@ -20,9 +20,7 @@ export default function Navbar() {
       }`}
     >
       <Link to="/" className="flex items-center gap-3 group cursor-pointer">
-        <div className="w-10 h-10 bg-brand-green rounded-xl flex items-center justify-center font-bold text-brand-dark italic transform group-hover:rotate-12 transition-transform duration-300 shadow-[0_0_20px_rgba(0,255,156,0.3)]">
-          T
-        </div>
+        <img src="/logo.svg" alt="Tictify Logo" className="w-8 h-8 object-contain" />
         <span className="text-white font-display font-bold text-2xl tracking-tighter">Tictify</span>
       </Link>
 
