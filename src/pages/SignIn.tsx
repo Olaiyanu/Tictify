@@ -11,7 +11,7 @@ export default function SignIn() {
     e.preventDefault();
     // Mock SignIn
     localStorage.setItem('isLoggedIn', 'true');
-    navigate('/events');
+    navigate('/dashboard');
   };
 
   return (

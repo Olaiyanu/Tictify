@@ -35,13 +35,16 @@ export default function Navbar() {
         ))}
       </div>
 
-      <div className="flex items-center gap-6">
-        <Link to="/signin" className="text-gray-400 hover:text-white text-sm font-bold uppercase tracking-widest transition-colors hidden sm:block">
+      <div className="flex items-center gap-3">
+        <Link 
+          to="/signin" 
+          className="text-gray-400 hover:text-white text-[10px] font-black uppercase tracking-[0.15em] transition-colors px-4 py-2 rounded-lg border border-white/5 hover:bg-white/5"
+        >
           Login
         </Link>
         <Link 
           to="/signup"
-          className="bg-brand-green text-brand-dark px-6 py-3 rounded-xl text-sm font-bold uppercase tracking-widest hover:shadow-[0_0_30px_rgba(0,255,156,0.4)] transition-all transform active:scale-95 text-center"
+          className="bg-brand-green text-brand-dark px-4 py-2 rounded-lg text-[10px] font-black uppercase tracking-[0.15em] hover:shadow-[0_0_20px_rgba(0,255,156,0.3)] transition-all transform active:scale-95 text-center whitespace-nowrap"
         >
           Sign Up
         </Link>

@@ -58,7 +58,10 @@ export default function Hero() {
               Create an Event
               <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <button className="btn-secondary">
+            <button 
+              onClick={() => document.getElementById('browse')?.scrollIntoView({ behavior: 'smooth' })}
+              className="btn-secondary"
+            >
               Browse Events
             </button>
           </motion.div>

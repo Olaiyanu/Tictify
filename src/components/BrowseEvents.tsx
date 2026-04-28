@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { Search, MapPin, Calendar, Tag, ArrowRight } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const MOCK_EVENTS = [
   { id: 1, title: 'Lagos Jazz Night', category: 'Music', date: 'Dec 12, 2026', venue: 'Jazz Hole, VI', price: '₦15,000', image: 'https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&q=80&w=800' },
@@ -89,10 +90,10 @@ export default function BrowseEvents() {
                   </div>
                 </div>
                 
-                <button className="w-full py-4 bg-white/5 border border-white/10 rounded-2xl text-[10px] font-bold uppercase tracking-[0.2em] text-white hover:bg-brand-green hover:text-brand-dark hover:border-transparent transition-all flex items-center justify-center gap-2 group/btn">
+                <Link to="/events" className="w-full py-4 bg-white/5 border border-white/10 rounded-2xl text-[10px] font-bold uppercase tracking-[0.2em] text-white hover:bg-brand-green hover:text-brand-dark hover:border-transparent transition-all flex items-center justify-center gap-2 group/btn">
                   View Tickets
                   <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                </button>
+                </Link>
               </div>
             </motion.div>
           ))}
