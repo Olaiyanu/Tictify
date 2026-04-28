@@ -1,0 +1,6 @@
+{
+  "name": "Tictify",
+  "description": "A modern event ticketing platform for organizers and guests to create events, sell tickets, and manage entry with secure QR codes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
