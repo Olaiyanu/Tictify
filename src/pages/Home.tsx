@@ -1,5 +1,6 @@
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
+import BrowseEvents from '../components/BrowseEvents';
 import TrustText from '../components/TrustText';
 import Features from '../components/Features';
 import HowItWorks from '../components/HowItWorks';
@@ -13,6 +14,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <BrowseEvents />
         <TrustText />
         <Features />
         <HowItWorks />

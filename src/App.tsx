@@ -3,11 +3,24 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation, Navigate, Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import Home from './pages/Home';
 import SignUp from './pages/SignUp';
 import SignIn from './pages/SignIn';
+import CreateEvent from './pages/CreateEvent';
+import Dashboard from './pages/Dashboard';
+
+// Route Guard
+function ProtectedRoute({ children }: { children: React.ReactNode }) {
+  const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+
+  if (!isLoggedIn) {
+    return <Navigate to="/signup" replace />;
+  }
+
+  return <>{children}</>;
+}
 
 // Scroll to top on route change
 function ScrollToTop() {
@@ -27,6 +40,22 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/signin" element={<SignIn />} />
+          <Route 
+            path="/dashboard" 
+            element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path="/create-event" 
+            element={
+              <ProtectedRoute>
+                <CreateEvent />
+              </ProtectedRoute>
+            } 
+          />
           {/* Add a fallback or redirect if needed */}
           <Route path="*" element={<Home />} />
         </Routes>

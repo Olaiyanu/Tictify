@@ -1,10 +1,18 @@
 import { motion } from 'motion/react';
 import { Eye, EyeOff, ArrowRight, ShieldCheck, Mail, Lock, Sparkles, ArrowLeft } from 'lucide-react';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function SignIn() {
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
+
+  const handleSignIn = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Mock SignIn
+    localStorage.setItem('isLoggedIn', 'true');
+    navigate('/dashboard');
+  };
 
   return (
     <div className="min-h-screen bg-brand-dark flex flex-col lg:flex-row relative">
@@ -72,7 +80,7 @@ export default function SignIn() {
             <p className="text-gray-500 font-medium text-sm sm:text-base">Sign in to manage your events on Tictify</p>
           </div>
 
-          <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+          <form className="space-y-6" onSubmit={handleSignIn}>
             <div className="space-y-2">
               <label className="text-sm font-bold text-white uppercase tracking-widest opacity-80">Email</label>
               <div className="relative group">

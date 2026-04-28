@@ -54,7 +54,7 @@ export default function Hero() {
           </motion.p>
           
           <motion.div variants={itemVariants} className="flex flex-wrap justify-center gap-6 mb-32 md:mb-24">
-            <Link to="/signup" className="btn-primary group">
+            <Link to="/create-event" className="btn-primary group">
               Create an Event
               <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
             </Link>
